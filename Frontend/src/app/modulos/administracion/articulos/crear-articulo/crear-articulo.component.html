@@ -1,0 +1,30 @@
+<div class="container">
+    <h3 class="text-center">Nuevo articulo</h3>
+    <div class="card" style="padding:1rem 2rem">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarProducto()" method="post" action="">
+        <div class="input-field">
+            <label>Referencia</label>
+            <input formControlName="referencia" type="text" name="referencia"/>
+        </div>
+        <div class="input-field">
+            <label>Nombre</label>
+            <input formControlName="nombre" type="text" name="nombre"/>
+        </div>
+        <div class="input-field">
+            <label>Marca</label>
+            <input formControlName="marca" type="text" name="marca"/>
+        </div>
+        <div class="input-field">
+            <label>Precio</label>
+            <input formControlName="precio" type="text" name="precio"/>
+        </div>
+        <div class="input-field">
+            <label>Stock</label>
+            <input formControlName="stock" type="text" name="stock"/>
+        </div>
+        <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Guardar
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <h3 class="text-center">Edicion de articulo</h3>
+    <div class="card" style="padding:1rem 2rem">
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()" method="post" action="">
+        <input type="hidden" name="" formControlName="id" />
+        <div class="input-field">
+            <label class="active" >Referencia</label>
+            <input formControlName="referencia" type="text" name="referencia"/>
+        </div>
+        <div class="input-field">
+            <label class="active" >Nombre</label>
+            <input formControlName="nombre" type="text" name="nombre"/>
+        </div>
+        <div class="input-field">
+            <label class="active" >Marca</label>
+            <input formControlName="marca" type="text" name="marca"/>
+        </div>
+        <div class="input-field">
+            <label class="active" >Precio</label>
+            <input formControlName="precio" type="text" name="precio"/>
+        </div>
+        <div class="input-field">
+            <label >Stock</label>
+            <input formControlName="stock" type="text" name="stock"/>
+        </div>
+        <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Guardar
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+    </div>
+</div>

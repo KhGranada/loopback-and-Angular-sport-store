@@ -1,0 +1,23 @@
+<nav style="background-color:#a7a7a7;margin-bottom:29px;">
+    <div class="nav-wrapper">
+      <a routerLink="inicio" class="brand-logo"><img src="./assets/img/logo.png" style="width:120px;margin:7px 0 1px 12px"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-articulos">Articulos</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/articulos">Articulos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesion</a></li>
+
+  </ul>
+

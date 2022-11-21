@@ -1,0 +1,19 @@
+<a routerLink="/administracion/crear-cliente" class="btn">Nuevo cliente</a>
+<table class="table responsive">
+    <thead>
+        <th>nombres</th>
+        <th>documento</th>
+        <th>correo</th>
+        <th>telefono</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of listadoRegistros">
+            <td>{{c.nombre}} {{c.apellidos}}</td>
+            <td>{{c.correo}}</td>
+            <td>{{c.telefono}}</td>
+            <td>{{c.direccion}}</td>
+            <td><a routerLink="/administracion/editar-cliente/{{c.id}}" class="btn">Editar</a></td>
+        </tr>
+    </tbody>
+</table>

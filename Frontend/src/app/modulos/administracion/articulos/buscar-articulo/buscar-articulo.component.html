@@ -1,0 +1,19 @@
+<a routerLink="/administracion/crear-articulo" class="btn">Nuevo producto</a>
+<table class="table responsive">
+    <thead>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>marca</th>
+        <th>Referencia</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>{{p.nombre}}</td>
+            <td>{{p.precio}}</td>
+            <td>{{p.marca}}</td>
+            <td>{{p.referencia}}</td>
+            <td><a routerLink="/administracion/editar-articulo/{{p.id}}" class="btn">Editar</a></td>
+        </tr>
+    </tbody>
+</table>
